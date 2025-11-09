@@ -15,11 +15,7 @@ const enviar = () => {
 
 <template>
   <div class="nova-tasca">
-    <input 
-      v-model="novaTasca" 
-      placeholder="Escriu una nova tasca"
-      @keyup.enter="enviar"
-    />
+    <input v-model="novaTasca" placeholder="Escriu una nova tasca" @keyup.enter="enviar"/>
     <button @click="enviar" class="btn btn-principal">Afegir</button>
   </div>
 </template>
