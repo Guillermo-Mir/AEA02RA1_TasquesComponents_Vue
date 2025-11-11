@@ -30,7 +30,10 @@ const marcarTasca = (id) => {
 }
 
 const tasquesFiltrades = computed(() => {
-  return mostrarPendents.value ? tasques.value.filter(t => !t.completada): tasques.value})
+  return mostrarPendents.value
+    ? tasques.value.filter(t => !t.completada)
+    : tasques.value
+})
 
 const totalTasques = computed(() => tasques.value.length)
 const pendents = computed(() => tasques.value.filter(t => !t.completada).length)
@@ -52,7 +55,11 @@ const pendents = computed(() => tasques.value.filter(t => !t.completada).length)
     </div>
 
     <!-- Llista de tasques -->
-    <TaskList :tasques="tasquesFiltrades" @eliminar="eliminarTasca" @marcar="marcarTasca"/>
+    <TaskList 
+      :tasques="tasquesFiltrades" 
+      @eliminar="eliminarTasca" 
+      @marcar="marcarTasca" 
+    />
 
     <!-- Resum -->
     <p class="resum">
@@ -60,5 +67,3 @@ const pendents = computed(() => tasques.value.filter(t => !t.completada).length)
     </p>
   </div>
 </template>
-
-
