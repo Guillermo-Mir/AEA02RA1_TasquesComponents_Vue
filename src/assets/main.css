@@ -45,7 +45,7 @@ h1 {
   border-color: #c27b48;
 }
 
-.btn {
+button {
   border: none;
   border-radius: 12px;
   padding: 10px 18px;
@@ -55,7 +55,7 @@ h1 {
   font-size: 15px;
 }
 
-.btn:hover {
+button:hover {
   transform: scale(1.03);
 }
 

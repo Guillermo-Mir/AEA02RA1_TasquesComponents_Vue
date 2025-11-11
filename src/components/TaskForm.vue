@@ -7,19 +7,13 @@ const novaTasca = ref('')
 const emit = defineEmits(['afegir'])
 
 const enviar = () => {
-  if (novaTasca.value.trim() === '') return
   emit('afegir', novaTasca.value)
-  novaTasca.value = ''
 }
 </script>
 
 <template>
   <div class="nova-tasca">
-    <input 
-      v-model="novaTasca" 
-      placeholder="Escriu una nova tasca"
-      @keyup.enter="enviar"
-    />
-    <button @click="enviar" class="btn btn-principal">Afegir</button>
+    <input v-model="novaTasca" placeholder="Escriu una nova tasca" @keyup.enter="enviar"/>
+    <button @click="enviar" class="btn-principal">Afegir</button>
   </div>
 </template>

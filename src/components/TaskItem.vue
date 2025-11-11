@@ -1,5 +1,5 @@
 <script setup>
-// rebem cada tasca com a prop
+// rebem cada tasca com a prop de TaskList
 const props = defineProps({
   tasca: Object
 })
@@ -14,10 +14,10 @@ const emit = defineEmits(['eliminar', 'marcar'])
       {{ tasca.nom }}
     </div>
     <div class="accions">
-      <button @click="emit('marcar')" class="btn btn-secundari">
+      <button @click="emit('marcar')" class="btn-secundari">
         {{ tasca.completada ? 'Desmarcar' : 'Completar' }}
       </button>
-      <button @click="emit('eliminar')" class="btn btn-eliminar">
+      <button @click="emit('eliminar')" class="btn-eliminar">
         🗑️
       </button>
     </div>
