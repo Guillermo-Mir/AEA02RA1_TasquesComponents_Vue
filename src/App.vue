@@ -55,11 +55,7 @@ const pendents = computed(() => tasques.value.filter(t => !t.completada).length)
     </div>
 
     <!-- Llista de tasques -->
-    <TaskList 
-      :tasques="tasquesFiltrades" 
-      @eliminar="eliminarTasca" 
-      @marcar="marcarTasca" 
-    />
+    <TaskList :tasques="tasquesFiltrades" @eliminar="eliminarTasca" @marcar="marcarTasca" />
 
     <!-- Resum -->
     <p class="resum">
